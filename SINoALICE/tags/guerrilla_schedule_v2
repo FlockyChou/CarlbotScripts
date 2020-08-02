@@ -1,0 +1,14 @@
+{let(currentTime):{strf:%H:%M}}
+{let(currentTimeInt):{strf:%-H%M}}
+{let(currentDate):{strf:%Y-%-m-%-d}}
+
+```Current time: {currentTime} UTC
+
+00:30 UTC - {if({currentTimeInt} > 30):{if({currentTimeInt} > 100):Past|Ongoing}|{td:{currentDate} 01:00:00}}
+02:30 UTC - {if({currentTimeInt} > 230):{if({currentTimeInt} > 300):Past|Ongoing}|{td:{currentDate} 03:00:00}}
+11:30 UTC - {if({currentTimeInt} > 1130):{if({currentTimeInt} > 1200):Past|Ongoing}|{td:{currentDate} 12:00:00}}
+18:30 UTC - {if({currentTimeInt} > 1830):{if({currentTimeInt} > 1900):Past|Ongoing}|{td:{currentDate} 19:00:00}}
+20:30 UTC - {if({currentTimeInt} > 2030):{if({currentTimeInt} > 2100):Past|Ongoing}|{td:{currentDate} 21:00:00}}
+22:30 UTC - {if({currentTimeInt} > 2230):{if({currentTimeInt} > 2300):Past|Ongoing}|{td:{currentDate} 23:00:00}}
+```
+Source: https://sinoalice.game-db.tw/timer
